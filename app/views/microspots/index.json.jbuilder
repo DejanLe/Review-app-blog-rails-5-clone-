@@ -1,0 +1,1 @@
+json.array! @microspots, partial: 'microspots/microspot', as: :microspot

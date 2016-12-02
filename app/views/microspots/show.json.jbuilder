@@ -1,0 +1,1 @@
+json.partial! "microspots/microspot", microspot: @microspot

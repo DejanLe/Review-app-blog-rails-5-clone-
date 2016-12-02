@@ -1,0 +1,30 @@
+  <div class="container show">
+  		<div class="row">
+  			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <%= image_tag @microspot.image.url(:medium), class: "img-responsive, center-block" %>
+                  
+				<p>
+				  
+				  <%= @microspot.content %>
+				</p>
+
+				<p>
+				  <strong><em>Author:</em></strong>
+				   <%= @microspot.user_id %>
+				 
+				</p>
+
+ 			<% if user_signed_in? %> 
+              <% if @microspot.user_id == current_user.id %>  
+
+				<%= link_to 'Edit', edit_microspot_path(@microspot) %> 
+ 		         <%= link_to "Delete", microspot_path(@microspot), method: :delete, data: { confirm: "Are you sure? "} %> 
+				  <% end %>
+            <% end %> 
+
+
+				|
+				<%= link_to 'Back', microspots_path %>
+ 			</div> 
+   		</div>   
+  </div>  

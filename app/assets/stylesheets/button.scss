@@ -1,0 +1,27 @@
+ 
+ .btn-danger {
+    color: #fff !important;
+    background-color: #000;
+    border-color: #fff; 
+    padding: 4px 45px !important;
+    margin-top: 10px;
+    border-color: red; 
+        &:hover {
+        color: red;
+        background-color: #fff;
+        border-color: #fff; 
+        }
+}
+.btn-success {
+    color: #fff;
+    background-color: transparent !important; 
+    border-color: #fff !important;  
+    padding: 4px 45px !important; 
+    transition: all 0.5s; 
+        &:hover {
+        color: orange !important; 
+        background-color: #fff !important; 
+        border-color: orange; 
+        padding: 4px 45px; 
+    }
+}

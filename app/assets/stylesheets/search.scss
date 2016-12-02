@@ -1,0 +1,24 @@
+#search-form{
+	margin-top:10px;
+}
+.input[type=text] {
+    width: 70px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 30%;
+    color:#fff;
+    background-color: transparent !important; 
+    border-color: #fff; 
+    padding: 4px 45px;
+    transition: all 0.5s;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit; 
+    background-color: transparent !important; 
+}

@@ -1,0 +1,37 @@
+// Place all the styles related to the Microspots controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ p{
+ font: 300 15px/1.6 'Open Sans', sans-serif;
+    color: #555;
+    word-wrap: break-word;
+    hyphens: auto;
+    margin-top: 3px;
+} 
+a{
+	color:orange;
+	text-decoration:none !important;
+	transition: all 0.5s;
+    &:hover{
+    color:#111;
+    }
+}
+ 
+h2{
+	font: 300 21px/1.7 'Open Sans', sans-serif;
+}
+/*.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.09);
+    transition: all 0.5s;
+    min-height:450px;
+}
+.panel:hover { 
+    background-color:#e2e2e2; 
+    box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.09);
+    color:#fff;
+}*/

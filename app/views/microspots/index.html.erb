@@ -1,0 +1,25 @@
+ <div class="container text-center">
+    <div class="row">  
+
+
+     <% @microspots.each do |microspot| %>
+
+      <div class="col-md-3">
+
+          <a href="/microspots/<%= microspot.id %>">
+
+           <%= image_tag microspot.image.url(:medium) %> 
+
+           <p> <%= truncate(microspot.content , length: 250 ) %></p>
+
+         </a>
+          
+       
+      </div> 
+
+    <% end %>
+  
+    
+
+   </div>   
+   </div>  

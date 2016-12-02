@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dejan Nikolic Rapp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          <%= link_to 'users & posts', root_path, class: 'navbar-brand' %>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+
+             <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to"Sign Out", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+              <li><%= link_to "Log in", new_user_session_path %></li>
+               <li> <%=  link_to 'Home',  microspots_path  %> </li>
+            <li> <%=  link_to 'About',  users_path  %> </li>
+            <li><a href="#contact">Contact</a></li>
+            <li> <%=  link_to 'Blog',  microspots_path  %> </li>
+          <% end %>
+          </ul>
+
+
+        <ul class="nav navbar-nav navbar-right">
+            <%  if user_signed_in? %>
+            <li> <%= link_to 'New Microspot', new_microspot_path, class: ' ' %></li>
+            <li> <%= link_to 'New User', new_user_path, class: ' ' %></li>
+          </ul>
+          <%end %>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    
+  <div class="jumbotron">
+    <div class="layout">
+        <div class="container text-center">
+      <div class="row">
+        <h1>Users & posts</h1>
+       
+         <!--search form-->  
+          <%= form_tag(microspots_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+            <%= submit_tag "Search", class: "btn btn-success" %>
+          <% end %>
+         
+          <!--end search form-->
+      </div>
+    </div>
+    </div>
+  
+  </div>
+   <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+
+    <!--footer-->
+<footer id="contact">
+  <div class="container ">
+    <div class="row"> 
+         <div class="col-md-4 ">
+            <address>
+    email: <a href="mailto:email@example.com">email@example.com</a> <br> 
+    visit me at: <a href="www.example.com"> 
+    www.example.com</a><br>
+    16000 Leskovac <br>
+    Republic of Serbia<br>
+    Phone: +38161acd900
+    </address>
+         </div>
+<div class="col-md-4 privacy  ">
+      <h4>Privacy Policy </h4>
+<h5>TIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.  </h5>
+    </div>
+      <div class="col-md-4 social-links  "> 
+        <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+ 
+      </div>
+    </div>
+
+
+    <div class="row text-center">
+    <div class="col-md-12  ">
+      <p>
+       <small>Copyright &copy; 2015-2016 by Dejan Nikolic. All rights reserved.</small> 
+      </p>
+    </div>
+      
+    </div>
+<div class="pull-right">
+          <a href="#home" class="scrollup" style="display: block;"><i class="fa fa-angle-up fa-3x"></i></a>
+        </div>
+  </div>
+ 
+
+</footer>
+  </body>
+</html>

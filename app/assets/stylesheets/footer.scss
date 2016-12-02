@@ -1,0 +1,47 @@
+/*footer*/
+footer {
+  background: #000;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #8A8A8A;
+  overflow: hidden; }
+
+footer a {
+  color: #8A8A8A;
+  text-decoration: none !important;
+  font-size: 18px;
+  border-bottom: 0px !important;
+  margin-right: 15px;
+  transition: all 0.5s; }
+
+footer a:hover {
+  color: orange; }
+
+.links {
+  margin-bottom: 30px; }
+
+footer .fa {
+  float: left; 
+   margin-right: 10px;
+  }
+footer .btn-default {
+  color: orange;
+  background-color: transparent;
+  border-color: orange;
+  transition: all 0.5s;
+  float: right;  
+   }
+
+footer .btn-default:hover {
+  color: #fff;
+  background-color: orange; }
+
+
+
+   address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.42857143;
+    color: #fff;
+    font-size: 14px;
+}
